@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: spotify-fastapi
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
+    envVars:
+      - key: DATABASE_URL
+        value: your_postgresql_render_url_here
